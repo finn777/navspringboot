@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="navspringboot:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="navspringboot-1.war">
+      <element id="artifact" artifact-name="navspringboot:war exploded" />
+    </root>
+  </artifact>
+</component>
