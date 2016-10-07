@@ -1,4 +1,5 @@
 navspringboot\ServletInitializer.class
+navspringboot\controllers\DataController.class
 navspringboot\models\DataDao.class
 navspringboot\NavspringbootApplication.class
 navspringboot\controllers\MainController.class
