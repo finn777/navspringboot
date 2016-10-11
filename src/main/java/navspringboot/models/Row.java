@@ -14,6 +14,17 @@ public class Row {
     private String execute; // Execute
     private String productline; // Product Line
 
+    public Row(String objecttype, String modulename, String versionname, String read, String insert, String modify, String delete, String execute, String productline) {
+        this.objecttype = objecttype;
+        this.modulename = modulename;
+        this.versionname = versionname;
+        this.read = read;
+        this.insert = insert;
+        this.modify = modify;
+        this.delete = delete;
+        this.execute = execute;
+        this.productline = productline;
+    }
 
     public String getObjecttype() {
         return objecttype;

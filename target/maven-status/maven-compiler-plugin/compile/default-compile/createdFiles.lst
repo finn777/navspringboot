@@ -1,5 +1,6 @@
 navspringboot\models\DataCrud.class
 navspringboot\models\DataRepository.class
+navspringboot\models\Filter.class
 navspringboot\ServletInitializer.class
 navspringboot\controllers\DataController.class
 navspringboot\NavspringbootApplication.class
