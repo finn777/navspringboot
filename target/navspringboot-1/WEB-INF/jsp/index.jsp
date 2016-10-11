@@ -18,6 +18,8 @@ JSTL URL: ${url}
 Message: ${message}
 <br>
 Rows count: ${rowscount}
+<br>
+Query count: ${querycount}
 </body>
 
 </html>

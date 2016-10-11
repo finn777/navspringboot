@@ -1,6 +1,8 @@
+navspringboot\models\DataCrud.class
+navspringboot\models\DataRepository.class
 navspringboot\ServletInitializer.class
 navspringboot\controllers\DataController.class
-navspringboot\models\DataDao.class
 navspringboot\NavspringbootApplication.class
 navspringboot\controllers\MainController.class
+navspringboot\models\Row.class
 navspringboot\models\Data.class
