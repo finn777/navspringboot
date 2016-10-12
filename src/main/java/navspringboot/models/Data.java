@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
 
 /*
 existing table:
@@ -85,6 +86,22 @@ public class Data {
     this.versionname = versionname;
     this.moduleid2 = moduleid2;
   }
+
+    public ArrayList<String> getTypes() {
+        ArrayList<String> Types = new ArrayList<String>();
+
+        Types.add("TableData");
+        Types.add("TableDescription");
+        Types.add("Form");
+        Types.add("Report");
+        Types.add("Dataport");
+        Types.add("XMLport");
+        Types.add("Codeunit");
+        Types.add("MenuSuite");
+        Types.add("Page");
+
+        return Types;
+    }
 
 // Getter and setter methods
 

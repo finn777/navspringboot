@@ -2,7 +2,7 @@ package navspringboot.models;
 
 public class Filter {
     private String filterobjecttype;
-    private int filterobjectid;
+    private Long filterobjectid;
 
     public String getFilterobjecttype() {
         return filterobjecttype;
@@ -12,11 +12,11 @@ public class Filter {
         this.filterobjecttype = filterobjecttype;
     }
 
-    public int getFilterobjectid() {
+    public Long getFilterobjectid() {
         return filterobjectid;
     }
 
-    public void setFilterobjectid(int filterobjectid) {
+    public void setFilterobjectid(Long filterobjectid) {
         this.filterobjectid = filterobjectid;
     }
 }
