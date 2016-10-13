@@ -74,12 +74,13 @@ public class MainController {
         return "index";
     }
 
-
     public ArrayList<Row> getRows(String objecttype, Long objectid, Long objectid2) {
         ArrayList<Row> Rows = new ArrayList<Row>();
         List<Data> data =
-                dataRepository.findByObjecttypeAndRangefromLessThanEqualAndRangetoGreaterThanEqual(objecttype,objectid,objectid2);
+                dataRepository.findByObjecttypeAndRangefromLessThanEqualAndRangetoGreaterThanEqualOrderByModulenameAscProductlineAscVersionnameAscDataidAsc
+                                (objecttype,objectid,objectid2); // order by ModulenameAscProductlineAscVersionnameAscDataidAsc
         for (int i = 0; i < data.size(); i++) {
+
             Row row = new Row(
             String.valueOf(data.get(i).getObjecttype()),
             String.valueOf(data.get(i).getModulename()),
@@ -92,8 +93,19 @@ public class MainController {
             String.valueOf(data.get(i).getProductline())
             );
 
-            Rows.add(row);
-        }
+            if (i >= 1) {
+                if (
+                    (!data.get(i).getModulename().equals(data.get(i - 1).getModulename()))
+                    |
+                    (!data.get(i).getProductline().equals(data.get(i - 1).getProductline()))
+                    |
+                    (!data.get(i).getVersionname().equals(data.get(i - 1).getVersionname()))
+                    )
+                Rows.add(row); else row = null; // a-la distinct
+            }
+            else Rows.add(row); // i = 0
+
+        } // for
 
         return Rows;
     }
@@ -104,5 +116,4 @@ public class MainController {
     @Autowired
     private DataRepository dataRepository;
 
-
-}
+} // class MainController

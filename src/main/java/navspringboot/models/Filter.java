@@ -19,4 +19,4 @@ public class Filter {
     public void setFilterobjectid(Long filterobjectid) {
         this.filterobjectid = filterobjectid;
     }
-}
+} // class Filter

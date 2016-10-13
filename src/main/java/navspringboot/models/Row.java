@@ -1,18 +1,15 @@
 package navspringboot.models;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-
 public class Row {
-    private String objecttype; // Module ID
-    private String modulename; // Module Description
-    private String versionname; // Country
-    private String read; // Read
-    private String insert; // Insert
-    private String modify; // Modify
-    private String delete; // Delete
-    private String execute; // Execute
-    private String productline; // Product Line
+    private String objecttype;
+    private String modulename;
+    private String versionname;
+    private String read;
+    private String insert;
+    private String modify;
+    private String delete;
+    private String execute;
+    private String productline;
 
     public Row(String objecttype, String modulename, String versionname, String read, String insert, String modify, String delete, String execute, String productline) {
         this.objecttype = objecttype;
@@ -97,4 +94,5 @@ public class Row {
     public void setProductline(String productline) {
         this.productline = productline;
     }
-}
+
+} // class Row
