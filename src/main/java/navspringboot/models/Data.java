@@ -6,24 +6,23 @@ import java.util.ArrayList;
 /*
 existing table:
 
-        CREATE TABLE `data` (
-        `DataID` int(11) NOT NULL AUTO_INCREMENT,
-        `ModuleName` varchar(80) DEFAULT NULL,
-        `ObjectType` varchar(80) DEFAULT NULL,
-        `Description` varchar(80) DEFAULT NULL,
-        `RangeFrom` int(20) DEFAULT NULL,
-        `RangeTo` int(20) DEFAULT NULL,
-        `Read` varchar(10) DEFAULT NULL,
-        `Insert` varchar(10) DEFAULT NULL,
-        `Modify` varchar(10) DEFAULT NULL,
-        `Delete` varchar(10) DEFAULT NULL,
-        `Execute` varchar(10) DEFAULT NULL,
-        `ProductLine` varchar(80) DEFAULT NULL,
-        `ModuleID` int(20) DEFAULT NULL,
-        `VersionName` varchar(20) DEFAULT NULL,
-        `ModuleID2` int(20) DEFAULT NULL,
-        PRIMARY KEY (`DataID`)
-        ) ENGINE=InnoDB AUTO_INCREMENT=649631 DEFAULT CHARSET=utf8;
+CREATE TABLE `data` (
+  `DataID` int(11) NOT NULL AUTO_INCREMENT,
+  `ModuleName` varchar(80) DEFAULT NULL,
+  `ObjectType` varchar(80) DEFAULT NULL,
+  `Description` varchar(80) DEFAULT NULL,
+  `RangeFrom` int(20) DEFAULT NULL,
+  `RangeTo` int(20) DEFAULT NULL,
+  `Read` varchar(10) DEFAULT NULL,
+  `Insert` varchar(10) DEFAULT NULL,
+  `Modify` varchar(10) DEFAULT NULL,
+  `Delete` varchar(10) DEFAULT NULL,
+  `Execute` varchar(10) DEFAULT NULL,
+  `ProductLine` varchar(80) DEFAULT NULL,
+  `ModuleID` int(20) DEFAULT NULL,
+  `VersionName` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`DataID`)
+) ENGINE=InnoDB AUTO_INCREMENT=45050 DEFAULT CHARSET=utf8;
 */
 
 
@@ -52,7 +51,6 @@ public class Data {
   private String productline;
   private Long moduleid;
   private String versionname;
-  private Long moduleid2;
 
 
   // ------------------------
@@ -79,7 +77,6 @@ public class Data {
     this.productline = productline;
     this.moduleid = moduleid;
     this.versionname = versionname;
-    this.moduleid2 = moduleid2;
   }
 
     public ArrayList<String> getTypes() {
@@ -212,11 +209,4 @@ public class Data {
     this.versionname = versionname;
   }
 
-  public Long getModuleid2() {
-    return moduleid2;
-  }
-
-  public void setModuleid2(Long moduleid2) {
-    this.moduleid2 = moduleid2;
-  }
 } // class Data

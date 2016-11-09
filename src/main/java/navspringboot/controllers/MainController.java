@@ -93,17 +93,7 @@ public class MainController {
             String.valueOf(data.get(i).getProductline())
             );
 
-            if (i >= 1) {
-                if (
-                    (!data.get(i).getModulename().equals(data.get(i - 1).getModulename()))
-                    |
-                    (!data.get(i).getProductline().equals(data.get(i - 1).getProductline()))
-                    |
-                    (!data.get(i).getVersionname().equals(data.get(i - 1).getVersionname()))
-                    )
-                Rows.add(row); else row = null; // a-la distinct
-            }
-            else Rows.add(row); // i = 0
+            Rows.add(row);
 
         } // for
 
